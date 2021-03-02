@@ -16,7 +16,7 @@ pipeline {
       }
     }
 	
-    stage('Push Image') {
+   /* stage('Push Image') {
       steps{
         script {
             docker.withRegistry( '', registryCredential ) {
@@ -30,7 +30,7 @@ pipeline {
       steps{
         sh "docker run -itd -p 3001:3000 $registry:$BUILD_NUMBER"
       }
-    }
+    }*/
     
     stage('Cleanup') {
       steps{
