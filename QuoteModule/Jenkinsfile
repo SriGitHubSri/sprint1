@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    registry = "sureshtripini/sales-portal-expressjs-backend"
+    registry = "ilahs/test"
     registryCredential = 'DOCKER_HUB'
     dockerImage = ''
   }
@@ -16,7 +16,7 @@ pipeline {
       }
     }
 	
-   /* stage('Push Image') {
+  stage('Push Image') {
       steps{
         script {
             docker.withRegistry( '', registryCredential ) {
@@ -26,7 +26,7 @@ pipeline {
       }
     }
     
-    stage('Run Container') {
+    /*  stage('Run Container') {
       steps{
         sh "docker run -itd -p 3001:3000 $registry:$BUILD_NUMBER"
       }
